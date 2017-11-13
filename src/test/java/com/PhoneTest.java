@@ -27,9 +27,10 @@ public class PhoneTest {
     @Test
     public void getSpecs() throws Exception {
         Spec spec = new Spec(Type.SENSOR, "10", "false", "USA");
-        assertEquals(spec.getCountry(), iphone.getSpecs().getCountry());
-        assertEquals(spec.getType(), iphone.getSpecs().getType());
-        assertEquals(spec.getModel(), iphone.getSpecs().getModel());
-        assertEquals(spec.getUsed(), iphone.getSpecs().getUsed());
+        Phone newPhone = new Phone(1111, 45, spec);
+        assertEquals(newPhone.getSpecs().getCountry(), iphone.getSpecs().getCountry());
+        assertEquals(newPhone.getSpecs().getType(), iphone.getSpecs().getType());
+        assertEquals(newPhone.getSpecs().getModel(), iphone.getSpecs().getModel());
+        assertEquals(newPhone.getSpecs().getUsed(), iphone.getSpecs().getUsed());
     }
 }

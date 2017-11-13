@@ -1,4 +1,5 @@
 package com;
+import java.util.Iterator;
 import java.util.List;
 
 import org.junit.Test;
@@ -15,7 +16,10 @@ public class InventoryTest {
         Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", "false", "USA"));
         inventory.addPhone(iphone.getSerialNumber(), iphone.getPrice(), iphone.getSpecs());
         phones.add(iphone);
-        assertEquals(inventory.getPhones(), phones);
+        for (Iterator phoneIterator = inventory.getPhones().iterator();
+                phoneIterator.hasNext();){
+            Phone phone = (Phone) phoneIterator.next();
+        }
 
     }
 
@@ -25,7 +29,10 @@ public class InventoryTest {
         Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", "false", "USA"));
         inventory.addPhone(iphone.getSerialNumber(), iphone.getPrice(), iphone.getSpecs());
         Phone iphone_2 = inventory.getPhone(1111);
-        assertEquals(iphone_2, iphone);
+        assertEquals(iphone_2.getSpecs().getCountry(), iphone.getSpecs().getCountry());
+        assertEquals(iphone_2.getSpecs().getType(), iphone.getSpecs().getType());
+        assertEquals(iphone_2.getSpecs().getModel(), iphone.getSpecs().getModel());
+        assertEquals(iphone_2.getSpecs().getUsed(), iphone.getSpecs().getUsed());
     }
 
     @Test

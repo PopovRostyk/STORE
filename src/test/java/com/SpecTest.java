@@ -9,21 +9,21 @@ public class SpecTest {
 
     @Test
     public void getType() throws Exception {
-        assertEquals(specs.getType(), Type.SENSOR);
+        assertEquals(Type.SENSOR, specs.getType());
     }
 
     @Test
     public void getModel() throws Exception {
-        assertEquals(specs.getModel(), "5s");
+        assertEquals("5s", specs.getModel());
     }
 
     @Test
     public void getUsed() throws Exception {
-        assertEquals(specs.getUsed(), false);
+        assertEquals("false", specs.getUsed());
     }
 
     @Test
     public void getCountry() throws Exception {
-        assertEquals(specs.getCountry(), "USA");
+        assertEquals("USA", specs.getCountry());
     }
 }
