@@ -30,16 +30,16 @@ public class Spec {
 
     public boolean isEqual(Spec other) {
             if (!(other.getModel().equals(this.getModel()))) {
-                return false ;
+                return false;
             }
             if (!(other.getUsed().equals(this.getUsed()))) {
-                return false ;
+                return false;
             }
             if (!(other.getType().equals(this.getType()))) {
-                return false ;
+                return false;
             }
             if (!(other.getCountry().equals(this.getCountry()))) {
-                return false ;
+                return false;
             }
             return true;
         }
