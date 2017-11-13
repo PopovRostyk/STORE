@@ -9,7 +9,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../laba4/account_description.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../laba4/auth.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../laba4/auth_account.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parsing/pom.xml" afterPath="$PROJECT_DIR$/../parsing/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parsing/src/main/java/parsing.java" afterPath="$PROJECT_DIR$/../parsing/src/main/java/parsing.java" />
     </list>
@@ -402,7 +401,7 @@
       <option name="presentableId" value="Default" />
       <updated>1510573166643</updated>
       <workItem from="1510573170874" duration="18382000" />
-      <workItem from="1510610234203" duration="3333000" />
+      <workItem from="1510610234203" duration="3443000" />
     </task>
     <servers />
   </component>
@@ -412,7 +411,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21715000" />
+    <option name="totallyTimeSpent" value="21825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
