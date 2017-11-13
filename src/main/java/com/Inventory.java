@@ -29,7 +29,7 @@ public class Inventory {
         List mathcingGuitars = new LinkedList();
         for (Iterator phoneIterator = phones.iterator(); phoneIterator.hasNext();) {
             Phone phone = (Phone) phoneIterator.next();
-            if (!(phone.getSpecs().is_equal(searchPhone.getSpecs())))
+            if (!(phone.getSpecs().isEqual(searchPhone.getSpecs())))
             {continue;}
             mathcingGuitars.add(phone);
         }

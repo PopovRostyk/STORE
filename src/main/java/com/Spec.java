@@ -28,15 +28,19 @@ public class Spec {
         return country;
     }
 
-    public boolean is_equal(Spec other) {
-            if (!(other.getModel().equals(this.getModel())))
-            {return false;}
-            if (!(other.getUsed().equals(this.getUsed())))
-            {return false;}
-            if (!(other.getType().equals(this.getType())))
-            {return false;}
-            if (!(other.getCountry().equals(this.getCountry())))
-            {return false;}
+    public boolean isEqual(Spec other) {
+            if (!(other.getModel().equals(this.getModel()))) {
+                return false ;
+            }
+            if (!(other.getUsed().equals(this.getUsed()))) {
+                return false ;
+            }
+            if (!(other.getType().equals(this.getType()))) {
+                return false ;
+            }
+            if (!(other.getCountry().equals(this.getCountry()))) {
+                return false ;
+            }
             return true;
         }
 

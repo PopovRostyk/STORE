@@ -12,7 +12,7 @@ public class InventoryTest {
     public void addPhone() throws Exception {
         List <Phone> phones= new LinkedList<>();
         Inventory inventory = new Inventory();
-        Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", false, "USA"));
+        Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", "false", "USA"));
         inventory.addPhone(iphone.getSerialNumber(), iphone.getPrice(), iphone.getSpecs());
         phones.add(iphone);
         assertEquals(inventory.getPhones(), phones);
@@ -22,7 +22,7 @@ public class InventoryTest {
     @Test
     public void getPhone() throws Exception {
         Inventory inventory = new Inventory();
-        Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", false, "USA"));
+        Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", "false", "USA"));
         inventory.addPhone(iphone.getSerialNumber(), iphone.getPrice(), iphone.getSpecs());
         Phone iphone_2 = inventory.getPhone(1111);
         assertEquals(iphone_2, iphone);
@@ -32,7 +32,7 @@ public class InventoryTest {
     public void search() throws Exception {
         List <Phone> phones= new LinkedList<>();
         Inventory inventory = new Inventory();
-        Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", false, "USA"));
+        Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", "false", "USA"));
         inventory.addPhone(iphone.getSerialNumber(), iphone.getPrice(), iphone.getSpecs());
         phones.add(iphone);
         List iphone_2 = inventory.search(iphone);

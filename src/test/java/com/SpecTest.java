@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SpecTest {
-    private Spec specs = new Spec(Type.SENSOR, "5s", false, "USA");
+    private Spec specs = new Spec(Type.SENSOR, "5s", "false", "USA");
 
     @Test
     public void getType() throws Exception {
