@@ -17,7 +17,8 @@ public class Inventory {
         phones.add(phone);
     }
     public Phone getPhone(int serialNumber) {
-        for (Iterator phoneIterator = phones.iterator(); phoneIterator.hasNext();) {
+        for (Iterator phoneIterator = phones.iterator();
+             phoneIterator.hasNext();) {
             Phone phone = (Phone) phoneIterator.next();
             if (phone.getSerialNumber() == serialNumber) {
                 return phone;
@@ -27,10 +28,12 @@ public class Inventory {
     }
     public List search(Phone searchPhone) {
         List mathcingGuitars = new LinkedList();
-        for (Iterator phoneIterator = phones.iterator(); phoneIterator.hasNext();) {
+        for (Iterator phoneIterator = phones.iterator();
+             phoneIterator.hasNext();) {
             Phone phone = (Phone) phoneIterator.next();
-            if (!(phone.getSpecs().isEqual(searchPhone.getSpecs())))
-            {continue;}
+            if (!(phone.getSpecs().isEqual(searchPhone.getSpecs()))) {
+                continue;
+            }
             mathcingGuitars.add(phone);
         }
         return mathcingGuitars;
@@ -41,8 +44,8 @@ public class Inventory {
 
     @Override
     public String toString() {
-        return "Inventory{" +
-                "phones="
+        return "Inventory{"
+                + "phones="
                 + phones
                 + '}';
     }
