@@ -9,9 +9,31 @@ import static org.junit.Assert.*;
 
 public class InventoryTest {
     @Test
+    public void getPhones() throws Exception {
+        int priceNew = 45;
+        int serialNewnumber = 1111;
+        Inventory phoneStore = new Inventory();
+        List <Phone> phones= new LinkedList<>();
+        Phone phonetwoTest = new Phone(serialNewnumber, priceNew,
+                new Spec(Type.SENSOR, "10", "false", "USA"));
+        phoneStore.addPhone(phonetwoTest.getSerialNumber(), phonetwoTest.getPrice(),
+                phonetwoTest.getSpecs());
+        phones.add(phonetwoTest);
+        Phone phonetoTest = (Phone) phoneStore.getPhones().get(0);
+        Phone phonetwotoTest = phones.get(0);
+        assertEquals(phonetoTest.getSpecs().getCountry(), phonetwotoTest.getSpecs().getCountry());
+        assertEquals(phonetoTest.getSpecs().getType(), phonetwotoTest.getSpecs().getType());
+        assertEquals(phonetoTest.getSpecs().getModel(), phonetwotoTest.getSpecs().getModel());
+        assertEquals(phonetoTest.getSpecs().getUsed(), phonetwotoTest.getSpecs().getUsed());
+        assertEquals(phonetoTest.getSerialNumber(), phonetwotoTest.getSerialNumber());
+        assertEquals(phonetoTest.getPrice(), phonetwotoTest.getPrice(), 0.1);
+    }
+
+    @Test
     public void testtoString() throws Exception {
         int priceNew = 45;
         int serialNewnumber = 1111;
+        List <Phone> phones= new LinkedList<>();
         Inventory phoneStore = new Inventory();
         Phone iphone = new Phone(serialNewnumber, priceNew,
                 new Spec(Type.SENSOR, "10", "false", "USA"));
