@@ -17,6 +17,9 @@ public class Main {
                 phone.getSpecs());
         phoneStore.addPhone(samsung.getSerialNumber(), samsung.getPrice(),
                 samsung.getSpecs());
-        System.out.println(phoneStore);
+        System.out.println(iphone.getSpecs());
+
+
+
     }
 }

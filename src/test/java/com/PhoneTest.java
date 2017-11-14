@@ -5,6 +5,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PhoneTest {
+    @Test
+    public void testtoString()  {
+        String msg = "Phone{serialNumber=1111, price=45.0, specs=Spec{type=Sensor, model='10', used=false, country='USA'}}";
+        Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", "false", "USA"));
+        assertEquals(msg, iphone.toString());
+    }
+
     private Phone iphone = new Phone(1111, 45, new Spec(Type.SENSOR, "10", "false", "USA"));
     @Test
     public void getSerialNumber() throws Exception {

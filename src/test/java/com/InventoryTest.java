@@ -9,6 +9,27 @@ import static org.junit.Assert.*;
 
 public class InventoryTest {
     @Test
+    public void testtoString() throws Exception {
+        int priceNew = 45;
+        int serialNewnumber = 1111;
+        Inventory phoneStore = new Inventory();
+        Phone iphone = new Phone(serialNewnumber, priceNew,
+                new Spec(Type.SENSOR, "10", "false", "USA"));
+        Phone phone = new Phone(serialNewnumber, priceNew,
+                new Spec(Type.SENSOR, "10", "false", "UA"));
+        Phone samsung = new Phone(serialNewnumber, priceNew,
+                new Spec(Type.SENSOR, "s6", "false", "GB"));
+        phoneStore.addPhone(iphone.getSerialNumber(), iphone.getPrice(),
+                iphone.getSpecs());
+        phoneStore.addPhone(phone.getSerialNumber(), phone.getPrice(),
+                phone.getSpecs());
+        phoneStore.addPhone(samsung.getSerialNumber(), samsung.getPrice(),
+                samsung.getSpecs());
+        String msg = "Inventory{phones=[Phone{serialNumber=1111, price=45.0, specs=Spec{type=Sensor, model='10', used=false, country='USA'}}, Phone{serialNumber=1111, price=45.0, specs=Spec{type=Sensor, model='10', used=false, country='UA'}}, Phone{serialNumber=1111, price=45.0, specs=Spec{type=Sensor, model='s6', used=false, country='GB'}}]}";
+        assertEquals(msg, phoneStore.toString());
+    }
+
+    @Test
     public void addPhone() throws Exception {
         List <Phone> phones= new LinkedList<>();
         Inventory inventory = new Inventory();
@@ -51,4 +72,5 @@ public class InventoryTest {
         assertEquals(phoneNew.getSpecs().getType(), iphone.getSpecs().getType());
         assertEquals(phoneNew.getSpecs().getCountry(), iphone.getSpecs().getCountry());
     }
+
 }
