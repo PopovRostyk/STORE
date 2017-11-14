@@ -20,7 +20,6 @@ public class InventoryTest {
                 phoneIterator.hasNext();){
             Phone phone = (Phone) phoneIterator.next();
         }
-
     }
 
     @Test
@@ -43,6 +42,10 @@ public class InventoryTest {
         inventory.addPhone(iphone.getSerialNumber(), iphone.getPrice(), iphone.getSpecs());
         phones.add(iphone);
         List iphone_2 = inventory.search(iphone);
-        assertEquals(iphone_2, phones);
+        Phone phoneNew = (Phone) iphone_2.get(0);
+        assertEquals(phoneNew.getSpecs().getUsed(), iphone.getSpecs().getUsed());
+        assertEquals(phoneNew.getSpecs().getModel(), iphone.getSpecs().getModel());
+        assertEquals(phoneNew.getSpecs().getType(), iphone.getSpecs().getType());
+        assertEquals(phoneNew.getSpecs().getCountry(), iphone.getSpecs().getCountry());
     }
 }
