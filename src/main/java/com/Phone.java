@@ -9,18 +9,15 @@ public class Phone {
         this.price = price;
         this.specs = specs;
     }
-
     public int getSerialNumber() {
         return serialNumber;
     }
-
     public double getPrice() {
         return price;
     }
     public void setPrice(double newPrice) {
         this.price = newPrice;
     }
-
     public Spec getSpecs() {
         return specs;
     }
