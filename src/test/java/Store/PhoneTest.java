@@ -1,5 +1,8 @@
-package com;
+package Store;
 
+import Store.Phone;
+import Store.Spec;
+import Store.Type;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

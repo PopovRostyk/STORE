@@ -1,6 +1,10 @@
-package com;
+package Store;
 import java.util.List;
 
+import Store.Inventory;
+import Store.Phone;
+import Store.Spec;
+import Store.Type;
 import org.junit.Test;
 
 import java.util.LinkedList;

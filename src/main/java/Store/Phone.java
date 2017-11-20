@@ -1,4 +1,4 @@
-package com;
+package Store;
 
 public class Phone {
     private int serialNumber;

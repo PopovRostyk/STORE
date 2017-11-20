@@ -1,4 +1,4 @@
-package com;
+package Store;
 
 public enum Type {
     SENSOR, SLIDER, BUTTONS;

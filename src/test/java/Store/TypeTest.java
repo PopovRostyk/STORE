@@ -1,5 +1,6 @@
-package com;
+package Store;
 
+import Store.Type;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

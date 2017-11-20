@@ -1,4 +1,4 @@
-package com;
+package Store;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +17,5 @@ public class Main {
                 phone.getSpecs());
         phoneStore.addPhone(samsung.getSerialNumber(), samsung.getPrice(),
                 samsung.getSpecs());
-        System.out.println(iphone.getSpecs());
     }
 }
