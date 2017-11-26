@@ -2,7 +2,7 @@ package Store;
 
 import java.util.List;
 
-public class Card {
+public class Card extends Observable{
     private List<Phone> phonesList;
     private PaymentStrategy paymentStrategy;
     private DeliveryStrategy deliveryStrategy;
@@ -23,5 +23,20 @@ public class Card {
 
     public List<Phone> getPhonesList() {
         return phonesList;
+    }
+
+    @Override
+    public void addObserver(Observer o) {
+        super.addObserver(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+        super.removeObserver(o);
+    }
+
+    @Override
+    public void notifyObservers() {
+        super.notifyObservers();
     }
 }
