@@ -4,10 +4,10 @@ public class Phone {
     private int serialNumber;
     private double price;
     private Spec specs;
-    public Phone(int serialNumber, double price, Spec specs) {
+    public Phone(int serialNumber, double price, Type type, String model, String used, String country) {
         this.serialNumber = serialNumber;
         this.price = price;
-        this.specs = specs;
+        this.specs = new Spec(type, model, used, country);
     }
     public int getSerialNumber() {
         return serialNumber;

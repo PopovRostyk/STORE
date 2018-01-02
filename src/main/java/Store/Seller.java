@@ -1,16 +1,10 @@
 package Store;
 
-public class Seller extends User{
-    private int money;
-    public int getMoney() {
-        return money;
-    }
+import java.util.*;
 
-    public void setMoney(int money) {
-        this.money = money;
-    }
+public class Seller extends User{
     @Override
-    public void update(){
-        System.out.println("This seller received " + money + " $.");
+    public void update(Observable o, Object arg) {
+        System.out.println("Cart has new item to sell: " + arg.toString());
     }
 }

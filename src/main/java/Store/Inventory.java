@@ -8,8 +8,8 @@ public class Inventory {
     public Inventory() {
         phones = new LinkedList();
     }
-    public void addPhone(int serialNumber, double price, Spec spec) {
-        Phone phone = new Phone(serialNumber, price, spec);
+    public void addPhone(int serialNumber, double price, Type type, String model, String used, String country) {
+        Phone phone = new Phone(serialNumber, price, type, model, used, country);
         phones.add(phone);
     }
     public Phone getPhone(int serialNumber) {

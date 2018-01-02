@@ -6,7 +6,7 @@ public class BonusDecorator extends CardDecorator {
         super(card);
     }
     public boolean ship(){
-        getDecorateCard().setPhonesList(new Phone(2404, 1500, new Spec(Type.BUTTONS, "Samsung", "new", "USA")));
+        getDecorateCard().setPhonesList(new Phone(2404, 1500, Type.BUTTONS, "Samsung", "new", "USA"));
         return getDecorateCard().ship();
     }
 }

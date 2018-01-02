@@ -1,12 +1,12 @@
 package Store;
 
-import java.util.List;
+import java.util.*;
 
 public class Card extends Observable{
     private List<Phone> phonesList;
     private PaymentStrategy paymentStrategy;
     private DeliveryStrategy deliveryStrategy;
-    public Card(PaymentStrategy paymentStrategy, DeliveryStrategy deliveryStrategy){
+    public Card(){
         this.paymentStrategy = paymentStrategy;
         this.deliveryStrategy = deliveryStrategy;
     }
@@ -25,18 +25,12 @@ public class Card extends Observable{
         return phonesList;
     }
 
-    @Override
-    public void addObserver(Observer o) {
-        super.addObserver(o);
+    public void addPhone(Phone phone){
+        this.phonesList.add(phone);
+        setChanged();
+        notifyObservers();
     }
-
-    @Override
-    public void removeObserver(Observer o) {
-        super.removeObserver(o);
-    }
-
-    @Override
-    public void notifyObservers() {
-        super.notifyObservers();
+    private List<Phone> getPhones(){
+        return this.phonesList;
     }
 }
